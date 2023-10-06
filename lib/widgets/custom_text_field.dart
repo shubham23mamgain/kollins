@@ -5,7 +5,7 @@ class CustomTextField extends StatelessWidget {
   final IconData? data;
   bool? isObscure = true;
   final String? hintText;
-  final TextInputType? keyboard;
+  // final TextInputType? keyboard;
 
   CustomTextField({
     super.key,
@@ -13,7 +13,7 @@ class CustomTextField extends StatelessWidget {
     this.data,
     this.hintText,
     this.isObscure,
-    this.keyboard,
+    // this.keyboard,
   });
 
   @override
@@ -30,7 +30,7 @@ class CustomTextField extends StatelessWidget {
             EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
         controller: controller,
         obscureText: isObscure!,
-        keyboardType: keyboard,
+        // keyboardType: keyboard,
         cursorColor: Theme.of(context).primaryColor,
         decoration: InputDecoration(
           border: InputBorder.none,

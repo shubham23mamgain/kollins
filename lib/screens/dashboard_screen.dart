@@ -44,7 +44,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           size: MediaQuery.of(context).size.width * 0.20,
                           color: Colors.grey.shade300,
                         )
-                      : null,
+                      : Icon(
+                          Icons.add_alert,
+                          size: MediaQuery.of(context).size.width * 0.20,
+                          color: Colors.grey.shade300,
+                        ),
                 ),
               ),
               const SizedBox(
@@ -58,19 +62,19 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       controller: firstnameController,
                       data: Icons.person,
                       hintText: 'First Name',
-                      keyboard: TextInputType.text,
+                      // keyboard: TextInputType.text,
                     ),
                     CustomTextField(
                       controller: lastnameController,
                       data: Icons.person,
-                      keyboard: TextInputType.text,
+                      // keyboard: TextInputType.text,
                       hintText: 'Last Name',
                     ),
                     CustomTextField(
                       controller: ageController,
                       data: Icons.calendar_month,
                       hintText: 'Age',
-                      keyboard: TextInputType.number,
+                      // keyboard: TextInputType.number,
                     ),
                   ],
                 ),
