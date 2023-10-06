@@ -34,6 +34,7 @@ class _OTPScreenState extends State<OTPScreen> {
               controller: mobileController,
               hintText: 'OTP',
               isObscure: false,
+              keyboard: TextInputType.number,
             ),
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.05),

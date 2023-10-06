@@ -51,27 +51,30 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 height: 10,
               ),
               Form(
-                  key: _formKey,
-                  child: Column(
-                    children: [
-                      CustomTextField(
-                        controller: firstnameController,
-                        data: Icons.person,
-                        hintText: 'First Name',
-                      ),
-                      CustomTextField(
-                        controller: lastnameController,
-                        data: Icons.person,
-                        hintText: 'Last Name',
-                      ),
-                      CustomTextField(
-                        controller: ageController,
-                        data: Icons.calendar_month,
-                        hintText: 'Age',
-                        keyboard: TextInputType.number as String,
-                      ),
-                    ],
-                  ))
+                key: _formKey,
+                child: Column(
+                  children: [
+                    CustomTextField(
+                      controller: firstnameController,
+                      data: Icons.person,
+                      hintText: 'First Name',
+                      keyboard: TextInputType.text,
+                    ),
+                    CustomTextField(
+                      controller: lastnameController,
+                      data: Icons.person,
+                      keyboard: TextInputType.text,
+                      hintText: 'Last Name',
+                    ),
+                    CustomTextField(
+                      controller: ageController,
+                      data: Icons.calendar_month,
+                      hintText: 'Age',
+                      keyboard: TextInputType.number,
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ),
