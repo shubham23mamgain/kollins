@@ -36,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
               data: Icons.phone,
               hintText: 'Mobile Number',
               isObscure: false,
-              // keyboard: TextInputType.number,
+              keyboard: TextInputType.phone,
             ),
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.05),

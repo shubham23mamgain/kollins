@@ -5,7 +5,7 @@ class CustomTextField extends StatelessWidget {
   final IconData? data;
   bool? isObscure = true;
   final String? hintText;
-  // final TextInputType? keyboard;
+  final TextInputType? keyboard;
 
   CustomTextField({
     super.key,
@@ -13,7 +13,7 @@ class CustomTextField extends StatelessWidget {
     this.data,
     this.hintText,
     this.isObscure,
-    // this.keyboard,
+    this.keyboard,
   });
 
 
@@ -21,7 +21,7 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        color: Colors.yellow,
+        color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(10)),
       ),
       padding: const EdgeInsets.all(10),
@@ -31,13 +31,17 @@ class CustomTextField extends StatelessWidget {
             EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
         controller: controller,
         obscureText: isObscure!,
-        // keyboardType: keyboard,
+        keyboardType: keyboard,
         cursorColor: Theme.of(context).primaryColor,
         decoration: InputDecoration(
           border: InputBorder.none,
           prefixIcon: Icon(
             data,
+            // size: 40,
+            color: Colors.blue.shade700,
           ),
+          hintText: hintText,
+          focusColor: Theme.of(context).secondaryHeaderColor,
         ),
       ),
     );
