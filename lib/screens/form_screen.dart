@@ -1,7 +1,9 @@
+// import 'dart:html';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:kollins/screens/document_screen.dart';
 import 'package:kollins/widgets/custom_text_field.dart';
 
 class FormScreen extends StatefulWidget {
@@ -88,8 +90,20 @@ class _FormScreenState extends State<FormScreen> {
                   width: 600,
                   height: 100,
                   alignment: Alignment.center,
+            
                   child: ElevatedButton.icon(
-                    onPressed: () {},
+                    onPressed: () {
+                       if (formKey.currentState!.validate()) {
+                         Navigator.push(context,
+                  MaterialPageRoute(builder: (c) => DocumentScreen(
+                        firstName: fnameController.text,
+                        lastName: lnameController.text,
+                        age: ageController.text,
+                        imageXFile: imageXFile,
+                        
+                        ),));
+                    }
+                    },
                     icon: const Icon(
                       Icons.recycling_rounded,
                       color: Colors.white,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kollins/screens/document_screen.dart';
 import 'package:kollins/screens/form_screen.dart';
+import 'package:image_picker/image_picker.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
@@ -10,6 +11,13 @@ class AuthScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<AuthScreen> {
+  final String? firstName;
+  final String? lastName;
+  final String? age;
+  final XFile? imageXFile;
+
+  _RegisterScreenState({this.firstName, this.lastName, this.age, this.imageXFile});
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -68,7 +76,12 @@ class _RegisterScreenState extends State<AuthScreen> {
           child: const TabBarView(
             children: [
               FormScreen(),
-              DocumentScreen(),
+               DocumentScreen(
+                firstName:  'John',
+                lastName: 'Deo',
+                age: '23',
+                imageXFile: null,
+              ),            
             ],
           ),
         ),
