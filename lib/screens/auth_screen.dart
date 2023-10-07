@@ -43,11 +43,11 @@ class _RegisterScreenState extends State<AuthScreen> {
             tabs: [
               Tab(
                 icon: Icon(Icons.person, color: Colors.white),
-                text: 'Generate card',
+                text: 'Register',
               ),
               Tab(
                 icon: Icon(Icons.document_scanner, color: Colors.white),
-                text: 'Cards',
+                text: 'Documents',
               ),
             ],
             indicatorColor: Colors.pinkAccent,

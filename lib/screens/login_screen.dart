@@ -24,9 +24,9 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.05),
           const Text(
-            'Welcome User',
+            'Enter Your Mobile Number',
             style: TextStyle(
-                fontSize: 18, fontWeight: FontWeight.w700, color: Colors.blue),
+                fontSize: 22, fontWeight: FontWeight.w700, color: Colors.blue),
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.05),
           Form(
@@ -52,7 +52,9 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             child: const Text(
               'Next',
-              style: TextStyle(color: Colors.black),
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,),
             ),
           )
         ]),

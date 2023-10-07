@@ -34,7 +34,7 @@ class CustomTextField extends StatelessWidget {
         keyboardType: keyboard,
         cursorColor: Theme.of(context).primaryColor,
         decoration: InputDecoration(
-          border: InputBorder.none,
+          // border: InputBorder.none,
           prefixIcon: Icon(
             data,
             // size: 40,

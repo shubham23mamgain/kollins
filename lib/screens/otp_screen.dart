@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kollins/screens/dashboard_screen.dart';
+import 'package:kollins/screens/auth_screen.dart';
 
 class OTPScreen extends StatefulWidget {
   const OTPScreen({super.key});
@@ -10,6 +10,7 @@ class OTPScreen extends StatefulWidget {
 
 class _OTPScreenState extends State<OTPScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  // final TextEditingController mobileController = TextEditingController();
   final List<TextEditingController> otpControllers = List.generate(
     4,
     (index) => TextEditingController(),
@@ -30,7 +31,6 @@ class _OTPScreenState extends State<OTPScreen> {
     FocusScope.of(context).requestFocus(focusNodes[index + 1]);
   }
 }
-
 
   @override
   Widget build(BuildContext context) {
@@ -85,19 +85,9 @@ class _OTPScreenState extends State<OTPScreen> {
           SizedBox(height: MediaQuery.of(context).size.height * 0.05),
           ElevatedButton(
             onPressed: () {
-              if (_formKey.currentState?.validate() ?? false) {
-                // Combine the OTP values
-                String otp = otpControllers.map((controller) => controller.text).join('');
-                
-                // Use 'otp' as needed
-                print('Entered OTP: $otp');
-                
-                // Navigate to the next screen
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (c) => const DashboardScreen()),
-                );
-              }
+              // db line
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (c) => const AuthScreen()));
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.cyan,
