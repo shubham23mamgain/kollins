@@ -46,10 +46,17 @@ class _LoginScreenState extends State<LoginScreen> {
               Navigator.push(context,
                   MaterialPageRoute(builder: (c) => const OTPScreen()));
             },
+            // style: ElevatedButton.styleFrom(
+            //   backgroundColor: Colors.cyan,
+            //   foregroundColor: Colors.amber,
+            // ),
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.cyan,
-              foregroundColor: Colors.amber,
-            ),
+                        backgroundColor: Colors.amber,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 50, vertical: 20),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        )),
             child: const Text(
               'Next',
               style: TextStyle(
@@ -61,4 +68,5 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
+  
 }

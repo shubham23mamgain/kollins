@@ -89,10 +89,17 @@ class _OTPScreenState extends State<OTPScreen> {
               Navigator.push(context,
                   MaterialPageRoute(builder: (c) => const AuthScreen()));
             },
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.cyan,
-              foregroundColor: Colors.amber,
-            ),
+            // style: ElevatedButton.styleFrom(
+            //   backgroundColor: Colors.cyan,
+            //   foregroundColor: Colors.amber,
+            // ),
+             style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.amber,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 50, vertical: 20),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        )),
             child: const Text(
               'Confirm',
               style: TextStyle(
